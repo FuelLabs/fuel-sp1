@@ -1,4 +1,5 @@
 pub mod block_execution_game;
+pub mod common;
 pub mod decompression_game;
 
 #[derive(thiserror::Error, Debug)]
@@ -15,9 +16,13 @@ pub enum Error {
     /// This error occurs when the proving game fails to prove
     #[error("failed to prove proving game: `{0}`")]
     FailedToProveProvingGame(String),
+    #[error("failed to verify proof: `{0}`")]
+    FailedToVerifyProof(String),
     /// This error occurs when a fault/mismatch is detected
     #[error("FAULT: `{0}`")]
     Fault(String),
+    #[error("failed to create solidity fixture: `{0}`")]
+    FailedToCreateSolidityFixture(anyhow::Error),
 }
 
 pub type Result<T> = core::result::Result<T, Error>;

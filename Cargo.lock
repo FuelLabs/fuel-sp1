@@ -3949,6 +3949,7 @@ name = "fuel-proving-games-sp1"
 version = "0.1.0"
 dependencies = [
  "alloy-sol-types 0.7.7",
+ "anyhow",
  "bincode",
  "clap",
  "csv",

@@ -2,23 +2,15 @@
 version = "0.1.0"
 name = "fuel-proving-games-sp1"
 edition = "2021"
-default-run = "block-execution-game-sp1-core"
+default-run = "block-execution-game-sp1"
 
 [[bin]]
-name = "block-execution-game-sp1-core"
-path = "src/bin/block_execution_game/core.rs"
+name = "block-execution-game-sp1"
+path = "src/bin/block_execution_game/main.rs"
 
 [[bin]]
-name = "block-execution-game-sp1-evm"
-path = "src/bin/block_execution_game/evm.rs"
-
-[[bin]]
-name = "decompression-game-sp1-core"
-path = "src/bin/decompression_game/core.rs"
-
-[[bin]]
-name = "decompression-game-sp1-evm"
-path = "src/bin/decompression_game/evm.rs"
+name = "decompression-game-sp1"
+path = "src/bin/decompression_game/main.rs"
 
 [lib]
 name = "fuel_proving_games_sp1"
@@ -26,6 +18,7 @@ path = "src/lib/lib.rs"
 
 [dependencies]
 alloy-sol-types = { workspace = true }
+anyhow = "1.0"
 bincode = "1.3.3"
 clap = { version = "4.0", features = ["derive", "env"] }
 fuel-zkvm-primitives-input-provider = { workspace = true }
