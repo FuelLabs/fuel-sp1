@@ -1,0 +1,23 @@
+# Cargo build
+**/target
+
+# Cargo config
+.cargo
+
+# Profile-guided optimization
+/tmp
+pgo-data.profdata
+
+# MacOS nuisances
+.DS_Store
+
+# Github commit file
+COMMIT_HASH
+
+# Benchmark results
+**/.csv
+**/*.csv
+
+# NVIDIA profiling files
+*.nsys-rep
+*.sqlite

@@ -1,0 +1,11 @@
+[package]
+version = "0.1.0"
+name = "fuel-block-execution-game-sp1"
+edition = "2021"
+
+[dependencies]
+alloy-sol-types = { workspace = true }
+# force the use of the patched version of curve25519-dalek, otherwise 4.1.2 is used
+curve25519-dalek = { workspace = true }
+fuel-zkvm-primitives-prover = { workspace = true }
+sp1-zkvm = { workspace = true }
