@@ -41,3 +41,19 @@ see [here](https://docs.succinct.xyz/docs/sp1/generating-proofs/hardware-acceler
 ```
 cargo test -p fuel-proving-games-sp1 run_all_fixtures_and_collect_report
 ```
+
+## Integration example
+
+Using the default prover configured via SP1_PROVER env var,
+
+```rs
+use fuel_proving_games_sp1::block_execution_game::defaults;
+use fuel_proving_games_sp1::block_execution_game::common::ProvingMode;
+
+fn main() {
+    let prover = defaults::game_prover();
+    let input = /* some input */;
+    let (proof, vk) = prover.prove(&input, ProvingMode::Groth16).unwrap(); // or Plonk / Core
+    prover.verify(&proof, &vk).unwrap();
+}
+```
