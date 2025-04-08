@@ -7,7 +7,7 @@
 //! ```
 //! or
 //! ```shell
-//! RUST_LOG=info cargo run --release --bin decompression-game-sp1 -- prove_fixture blob_14133451_14136885 --mode core
+//! RUST_LOG=info cargo run --release --bin decompression-game-sp1 -- prove_fixture blob_14133451_14136885 core
 //! ```
 
 use clap::{Parser, Subcommand};

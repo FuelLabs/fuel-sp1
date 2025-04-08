@@ -7,7 +7,7 @@
 //! ```
 //! or
 //! ```shell
-//! RUST_LOG=info cargo run --release --bin block-execution-game-sp1 -- prove_fixture add --mode core
+//! RUST_LOG=info cargo run --release --bin block-execution-game-sp1 -- prove_fixture add core
 //! ```
 
 use clap::{Parser, Subcommand};
